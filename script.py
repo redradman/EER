@@ -1,12 +1,16 @@
 import sys
 import requests
 from bs4 import BeautifulSoup
+import re
 
-url = input("Enter the URL to visit (include: https): ")
+# url = input("Enter the URL to visit (include: https): ")
 
-response = requests.get(url)
+response = requests.get("https://entrepreneurship.ubc.ca/")
 print(response.status_code)
 response.raise_for_status()
+soup = BeautifulSoup(response.content, 'html.parser')
+text = soup.get_text().strip()
+print(re.sub(r'\s+', ' ', text).strip())
 
 
 
