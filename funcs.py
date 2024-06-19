@@ -2,7 +2,9 @@
 ##################### libraries
 
 import pandas as pd
+import requests
 from bs4 import BeautifulSoup
+import re
 
 ###############################
 ##################### variables
@@ -60,7 +62,7 @@ def get_plaintext_from_url(url):
     except requests.exceptions.RequestException as e:
         return f"An error occurred: {e}"
     
-    
+# regex cleaning
 def clean_extracted_text(text: str):
     """ 
     clean text using regex

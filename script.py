@@ -5,9 +5,11 @@ import re
 import funcs
 
 # reading the 
-# df, dict_with_links = funcs.link_extractor()
+df, dict_with_links = funcs.link_extractor()
 
-# print(dict_with_links)
+print(dict_with_links)
+url = dict_with_links['e@UBCV'][0]
+print(funcs.clean_extracted_text(funcs.get_plaintext_from_url(url)))
 
 
 
@@ -17,12 +19,12 @@ import funcs
 
 # url = input("Enter the URL to visit (include: https): ")
 
-response = requests.get("https://entrepreneurship.ubc.ca/")
-print(response.status_code)
-response.raise_for_status()
-soup = BeautifulSoup(response.content, 'html.parser')
-text = soup.get_text().strip()
-print(re.sub(r'\s+', ' ', text).strip())
+# response = requests.get("https://entrepreneurship.ubc.ca/")
+# print(response.status_code)
+# response.raise_for_status()
+# soup = BeautifulSoup(response.content, 'html.parser')
+# text = soup.get_text().strip()
+# print(re.sub(r'\s+', ' ', text).strip())
 
 
 
