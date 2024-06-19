@@ -5,6 +5,7 @@ import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 import re
+import csv
 
 ###############################
 ##################### variables
@@ -80,3 +81,22 @@ def add_program(dict_to_add_to, program_name, link, text):
     if program_name not in dict_to_add_to:
         dict_to_add_to[program_name] = []
     dict_to_add_to[program_name].append({link: text})
+    
+    
+# save programs data
+def save_programs_csv(database_to_save, file_name = "results.csv"):
+    """ 
+    get the dictionary containing the programs and save as csv with the intended name
+    """
+    csv_data = [] 
+    csv_file_path = 'results.csv'
+    for program in database_to_save:
+        for link_text_pair in database_to_save[program]:
+            keys = link_text_pair.keys()
+            for key in keys:
+                data = [program, key, link_text_pair[key]]
+                csv_data.append(data)
+
+    with open(file_name, mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerows(csv_data)
