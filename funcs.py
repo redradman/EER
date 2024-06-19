@@ -2,6 +2,7 @@
 ##################### libraries
 
 import pandas as pd
+from bs4 import BeautifulSoup
 
 ###############################
 ##################### variables
@@ -43,5 +44,21 @@ def link_extractor(csvfile =  CSV_file):
     return df, dict_with_extracted_links
 
 
+# establishing a connection
+def get_plaintext_from_url(url):
+    """ 
+    establish a connection with the url and extract the text and return it
+    """
+    try:
+        # Send a GET request
+        response = requests.get(url)
+        response.raise_for_status() # halt if unsuccessful, throws an error
+        # Parse HTML via BeautifulSoup
+        soup = BeautifulSoup(response.content, 'html.parser')
+        # Extract plain text
+        return soup.get_text()
+    except requests.exceptions.RequestException as e:
+        return f"An error occurred: {e}"
+    
 
     

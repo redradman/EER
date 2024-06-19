@@ -4,10 +4,10 @@ from bs4 import BeautifulSoup
 import re
 import funcs
 
+# reading the 
+# df, dict_with_links = funcs.link_extractor()
 
-df, dict_with_links = funcs.link_extractor()
-print(dict_with_links)
-
+# print(dict_with_links)
 
 
 
@@ -17,12 +17,12 @@ print(dict_with_links)
 
 # url = input("Enter the URL to visit (include: https): ")
 
-# response = requests.get("https://entrepreneurship.ubc.ca/")
-# print(response.status_code)
-# response.raise_for_status()
-# soup = BeautifulSoup(response.content, 'html.parser')
-# text = soup.get_text().strip()
-# print(re.sub(r'\s+', ' ', text).strip())
+response = requests.get("https://entrepreneurship.ubc.ca/")
+print(response.status_code)
+response.raise_for_status()
+soup = BeautifulSoup(response.content, 'html.parser')
+text = soup.get_text().strip()
+print(re.sub(r'\s+', ' ', text).strip())
 
 
 
