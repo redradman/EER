@@ -1,7 +1,3 @@
-import sys
-
-
-
 import funcs
 
 # reading the 
