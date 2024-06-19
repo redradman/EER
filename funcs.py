@@ -9,9 +9,7 @@ import re
 ###############################
 ##################### variables
 # csv file that can be changed (ensure that the header match the sample)
-CSV_file = "sample_data_multiple_links.csv"
-
-
+CSV_file = "sample_data.csv"
 
 ###############################
 ##################### functions 
@@ -54,6 +52,8 @@ def get_plaintext_from_url(url):
     try:
         # Send a GET request
         response = requests.get(url)
+        if response.status_code != 200: 
+            raise ValueError('Status code not 200. Connection cannot be established correctly')
         response.raise_for_status() # halt if unsuccessful, throws an error
         # Parse HTML via BeautifulSoup
         soup = BeautifulSoup(response.content, 'html.parser')
@@ -72,3 +72,11 @@ def clean_extracted_text(text: str):
     cleaned_text = re.sub(r'\n\s+', '\n', cleaned_text).strip()
     return cleaned_text
     
+# program adder
+def add_program(dict_to_add_to, program_name, link, text):
+    """ 
+    add a program to dictionary with its link and text as elements in the list (entry) associated with the program (key)
+    """
+    if program_name not in dict_to_add_to:
+        dict_to_add_to[program_name] = []
+    dict_to_add_to[program_name].append({link: text})
