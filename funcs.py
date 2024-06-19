@@ -60,5 +60,13 @@ def get_plaintext_from_url(url):
     except requests.exceptions.RequestException as e:
         return f"An error occurred: {e}"
     
-
+    
+def clean_extracted_text(text: str):
+    """ 
+    clean text using regex
+    """
+    cleaned_text = re.sub(r'\s+', ' ', text).strip()
+    cleaned_text = re.sub(r'(?<!^)(?<![A-Z])(?=[A-Z])', ' ', cleaned_text)
+    cleaned_text = re.sub(r'\n\s+', '\n', cleaned_text).strip()
+    return cleaned_text
     
