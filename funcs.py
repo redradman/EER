@@ -1,22 +1,25 @@
 ###############################
-# importing libraries
+##################### libraries
 
 import pandas as pd
 
 ###############################
-# variables
+##################### variables
 # csv file that can be changed (ensure that the header match the sample)
 CSV_file = "sample_data_multiple_links.csv"
 
 
 
 ###############################
-# functions 
+##################### functions 
+
+# read functions 
+
 def link_extractor(csvfile =  CSV_file):
     """
     gets the csvfile and returns the dataframe, generated dictionary with programs as key and the list of links as the corressponding entry
     """
-    df = pd.read_csv(CSV_file, index_col = 0)
+    df = pd.read_csv(csvfile, index_col = 0)
 
     # convert the df to dictionary
     df_dict = df.to_dict()
@@ -38,5 +41,7 @@ def link_extractor(csvfile =  CSV_file):
             # print(dict_with_extracted_links)
         
     return df, dict_with_extracted_links
+
+
 
     
