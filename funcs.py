@@ -84,7 +84,7 @@ def add_program(dict_to_add_to, program_name, link, text):
     
     
 # save programs data
-def save_programs_csv(database_to_save, file_name = "results.csv"):
+def save_scraped_programs_csv(database_to_save, file_name = "scraping_results.csv"):
     """ 
     get the dictionary containing the programs and save as csv with the intended name
     """
@@ -100,3 +100,6 @@ def save_programs_csv(database_to_save, file_name = "results.csv"):
     with open(file_name, mode='w', newline='') as file:
         writer = csv.writer(file)
         writer.writerows(csv_data)
+
+
+
