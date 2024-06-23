@@ -29,6 +29,7 @@ def read_file(file):
         df = pd.read_excel(file, index_col = 0)
     return df
 
+# extract links
 def link_extractor(file =  XLSX_FILE):
     """
     gets the csvfile and returns the dataframe, generated dictionary with programs as key and the list of links as the corressponding entry
