@@ -17,18 +17,23 @@ XLSX_FILE = "sample_data.xlsx"
 ##################### functions 
 
 # read functions 
-
-def link_extractor(file =  XLSX_FILE):
+def read_file(file):
+    """ 
+    determine which reader to use based on the suffix and read the given file
     """
-    gets the csvfile and returns the dataframe, generated dictionary with programs as key and the list of links as the corressponding entry
-    """
-    # determine which reader to use based on the suffix
     if file.split(".")[-1] == "csv":
         print(f"reading {file}")
         df = pd.read_csv(file, index_col = 0)
     if file.split(".")[-1] == "xlsx":
         print(f"reading {file}")
         df = pd.read_excel(file, index_col = 0)
+    return df
+
+def link_extractor(file =  XLSX_FILE):
+    """
+    gets the csvfile and returns the dataframe, generated dictionary with programs as key and the list of links as the corressponding entry
+    """
+    df = read_file(file)
         
 
     # convert the df to dictionary
