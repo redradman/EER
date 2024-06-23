@@ -4,7 +4,7 @@ from tqdm import tqdm
 
 df, dict_with_links = funcs.link_extractor()
 
-# print(dict_with_links)
+print(dict_with_links)
 # print(funcs.clean_extracted_text(funcs.get_plaintext_from_url(url)))
 
 # generated database used to store the extracted text with the tags

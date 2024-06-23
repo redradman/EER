@@ -11,17 +11,29 @@ import csv
 ##################### variables
 # csv file that can be changed (ensure that the header match the sample)
 CSV_file = "sample_data.csv"
+XLSX_FILE = "sample_data.xlsx"
 
 ###############################
 ##################### functions 
 
 # read functions 
 
-def link_extractor(csvfile =  CSV_file):
+def link_extractor(file =  XLSX_FILE):
     """
     gets the csvfile and returns the dataframe, generated dictionary with programs as key and the list of links as the corressponding entry
     """
-    df = pd.read_csv(csvfile, index_col = 0)
+    # if (file == None): 
+    #     df = pd.read_excel(file, index_col = 0)
+    # else: 
+    #     df = pd.read_csv(file, index_col = 0)
+    # df = pd.read_excel(csvfile, index_col = 0)
+    if file.split(".")[-1] == "csv":
+        print(f"reading {file}")
+        df = pd.read_csv(file, index_col = 0)
+    if file.split(".")[-1] == "xlsx":
+        print(f"reading {file}")
+        df = pd.read_excel(file, index_col = 0)
+        
 
     # convert the df to dictionary
     df_dict = df.to_dict()
