@@ -22,7 +22,6 @@ def programs_maker():
         
         
 programs = programs_maker()
-# print(programs)
 funcs.save_scraped_programs_csv(programs)
 
 

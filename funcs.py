@@ -12,6 +12,9 @@ import csv
 # csv file that can be changed (ensure that the header match the sample)
 CSV_file = "sample_data.csv"
 XLSX_FILE = "sample_data.xlsx"
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+}
 
 ###############################
 ##################### functions 
@@ -52,6 +55,7 @@ def link_extractor(file =  XLSX_FILE):
             parsed_list = link_string.split('|')
             # removal of any whitespaces from all links
             no_space_list = list(map(lambda x: x.replace(" ", ""), parsed_list))
+            no_space_list = [link.replace("\n","") for link in no_space_list]
             # print(no_space_list)
             dict_with_extracted_links[key] = no_space_list
             # print(dict_with_extracted_links)
@@ -66,9 +70,10 @@ def get_plaintext_from_url(url):
     """
     try:
         # Send a GET request
-        response = requests.get(url)
+        response = requests.get(url, headers=HEADERS)
         if response.status_code != 200: 
-            raise ValueError('Status code not 200. Connection cannot be established correctly')
+            print(f"Could not access {url}, error code: {response.status_code}")
+            # raise ValueError('Status code not 200. Connection cannot be established correctly')
         response.raise_for_status() # halt if unsuccessful, throws an error
         # Parse HTML via BeautifulSoup
         soup = BeautifulSoup(response.content, 'html.parser')
