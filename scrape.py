@@ -20,7 +20,10 @@ def programs_maker():
             funcs.add_program(programs, program, link, clean_text) # add the result to the database dictionary
     return programs
         
-funcs.save_scraped_programs_csv(programs_maker())
+        
+programs = programs_maker()
+# print(programs)
+funcs.save_scraped_programs_csv(programs)
 
 
 

@@ -108,7 +108,9 @@ def save_scraped_programs_csv(database_to_save, file_name = "scraping_results.cs
         for link_text_pair in database_to_save[program]:
             keys = link_text_pair.keys()
             for key in keys:
-                data = [program, key, link_text_pair[key]]
+                data = [program, # name of program 
+                        key, # link 
+                        link_text_pair[key]] # extracted text
                 csv_data.append(data)
 
     with open(file_name, mode='w', newline='') as file:
