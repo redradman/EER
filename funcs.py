@@ -109,6 +109,7 @@ def save_scraped_programs_csv(database_to_save, file_name = "scraping_results.cs
     """
     csv_data = [] 
     header = ["program", "link", "text"]
+    csv_data.append(header)
     csv_file_path = 'results.csv'
     for program in database_to_save:
         for link_text_pair in database_to_save[program]:
