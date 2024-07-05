@@ -2,13 +2,14 @@ import spacy
 import pandas as pd
 
 
-DATA = "scraping_results.csv"
+DATA = "clean_data.csv"
 COMPETENCIES = "cocurricular_competencies.xlsx"
 
 nlp = spacy.load("en_core_web_md")
 
-df = pd.read_excel(COMPETENCIES)
-data_df = pd.read_csv(DATA)
+coc = pd.read_excel(COMPETENCIES)
+data = pd.read_csv(DATA)
+
 
 # read the words associated with the skill
 
@@ -21,7 +22,15 @@ data_df = pd.read_csv(DATA)
 #     print(keywords)
 #     pass
 
-keywords = df.at[0, 'keyword']
+# keywords = df.at[0, 'keyword']
+
+
+# append all of the string for each program to each other 
+# after this the number of rows/keys in the dict is the program and the value for that key is all of the text associated with that program
+text_hashmap = dict.fromkeys(data["program"], '')
+for row in data.values:
+    if type(row[2]) == str:
+        text_hashmap[row[0]] += row[2]
 
 
 
