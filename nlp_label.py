@@ -22,8 +22,8 @@ data = pd.read_csv(DATA)
 #     print(keywords)
 #     pass
 
-# keywords = df.at[0, 'keyword']
-
+keywords = coc.at[0, 'keyword']
+print(keywords)
 
 # append all of the string for each program to each other 
 # after this the number of rows/keys in the dict is the program and the value for that key is all of the text associated with that program
