@@ -257,3 +257,7 @@ with pd.ExcelWriter(COMPETENCIES, engine='openpyxl', mode='a', if_sheet_exists='
 book.save(COMPETENCIES) 
 
 logging.info("Saved completed")
+
+
+
+#### competencies finish
