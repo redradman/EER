@@ -54,7 +54,7 @@ def preprocess_text(text):
 
     # Remove stop words and non-alphabetic tokens to prevent tampering with scoring
     filtered_text = " ".join([word for word in word_tokens if word.isalpha() and word not in stop_words])
-    print("Text preprocessing completed.")
+    logging.info("Text preprocessing completed.")
     return filtered_text
 
 ###############################################################

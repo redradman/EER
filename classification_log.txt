@@ -3385,3 +3385,195 @@
 2024-08-01 20:53:42,183 - INFO - Evaluating competency: Networking skills for program: Engineers without borders
 2024-08-01 20:53:42,531 - INFO - Evaluating competency: Negotiating skills for program: Engineers without borders
 2024-08-01 20:53:42,890 - INFO - Evaluating competency: Self-Aware for program: Engineers without borders
+2024-08-01 20:53:43,274 - INFO - Evaluating competency: Enterprising Mindset  for program: Engineers without borders
+2024-08-01 20:53:43,622 - INFO - Evaluating competency: Self-Directed for program: Engineers without borders
+2024-08-01 20:53:43,969 - INFO - Evaluating competency: Teamwork for program: Engineers without borders
+2024-08-01 20:53:44,321 - INFO - Evaluating competency: Uncertainty Management for program: Engineers without borders
+2024-08-01 20:53:44,671 - INFO - Chunk 38 classification completed for program: Engineers without borders
+2024-08-01 20:53:44,671 - INFO - Classifying chunk 39/64 for program: Engineers without borders
+2024-08-01 20:53:44,671 - INFO - Evaluating competency: Entrepreneurship and Entrepreneurial Mindset for program: Engineers without borders
+2024-08-01 20:53:45,019 - INFO - Evaluating competency: Opportunity Recognition  for program: Engineers without borders
+2024-08-01 20:53:45,364 - INFO - Evaluating competency: Market Research for program: Engineers without borders
+2024-08-01 20:53:45,706 - INFO - Evaluating competency: Product Development for program: Engineers without borders
+2024-08-01 20:53:46,058 - INFO - Evaluating competency: Marketing for program: Engineers without borders
+2024-08-01 20:53:46,407 - INFO - Evaluating competency: Business Modeling for program: Engineers without borders
+2024-08-01 20:53:46,737 - INFO - Evaluating competency: Managerial Decision Making for program: Engineers without borders
+2024-08-01 20:53:47,081 - INFO - Evaluating competency: Legal Issues for program: Engineers without borders
+2024-08-01 20:53:47,422 - INFO - Evaluating competency: Financial Decision Making for program: Engineers without borders
+2024-08-01 20:53:47,759 - INFO - Evaluating competency: Observational skills for program: Engineers without borders
+2024-08-01 20:53:48,104 - INFO - Evaluating competency: Creativity skills for program: Engineers without borders
+2024-08-01 20:53:48,439 - INFO - Evaluating competency: Problem solving skills for program: Engineers without borders
+2024-08-01 20:53:48,782 - INFO - Evaluating competency: Communication skills for program: Engineers without borders
+2024-08-01 20:53:49,125 - INFO - Evaluating competency: Decision-making skills for program: Engineers without borders
+2024-08-01 20:53:49,468 - INFO - Evaluating competency: Planning and project managing skills for program: Engineers without borders
+2024-08-01 20:53:49,838 - INFO - Evaluating competency: Networking skills for program: Engineers without borders
+2024-08-01 20:53:50,202 - INFO - Evaluating competency: Negotiating skills for program: Engineers without borders
+2024-08-01 20:53:50,546 - INFO - Evaluating competency: Self-Aware for program: Engineers without borders
+2024-08-01 20:53:50,884 - INFO - Evaluating competency: Enterprising Mindset  for program: Engineers without borders
+2024-08-01 20:53:51,224 - INFO - Evaluating competency: Self-Directed for program: Engineers without borders
+2024-08-01 20:53:51,568 - INFO - Evaluating competency: Teamwork for program: Engineers without borders
+2024-08-01 20:53:51,905 - INFO - Evaluating competency: Uncertainty Management for program: Engineers without borders
+2024-08-01 20:53:52,246 - INFO - Chunk 39 classification completed for program: Engineers without borders
+2024-08-01 20:53:52,246 - INFO - Classifying chunk 40/64 for program: Engineers without borders
+2024-08-01 20:53:52,246 - INFO - Evaluating competency: Entrepreneurship and Entrepreneurial Mindset for program: Engineers without borders
+2024-08-01 20:53:52,587 - INFO - Evaluating competency: Opportunity Recognition  for program: Engineers without borders
+2024-08-01 20:53:52,930 - INFO - Evaluating competency: Market Research for program: Engineers without borders
+2024-08-01 20:53:53,267 - INFO - Evaluating competency: Product Development for program: Engineers without borders
+2024-08-01 20:53:53,604 - INFO - Evaluating competency: Marketing for program: Engineers without borders
+2024-08-01 20:53:53,949 - INFO - Evaluating competency: Business Modeling for program: Engineers without borders
+2024-08-01 20:53:54,284 - INFO - Evaluating competency: Managerial Decision Making for program: Engineers without borders
+2024-08-01 20:53:54,612 - INFO - Evaluating competency: Legal Issues for program: Engineers without borders
+2024-08-01 20:53:54,951 - INFO - Evaluating competency: Financial Decision Making for program: Engineers without borders
+2024-08-01 20:53:55,280 - INFO - Evaluating competency: Observational skills for program: Engineers without borders
+2024-08-01 20:53:55,619 - INFO - Evaluating competency: Creativity skills for program: Engineers without borders
+2024-08-01 20:53:55,953 - INFO - Evaluating competency: Problem solving skills for program: Engineers without borders
+2024-08-01 20:53:56,293 - INFO - Evaluating competency: Communication skills for program: Engineers without borders
+2024-08-01 20:53:56,631 - INFO - Evaluating competency: Decision-making skills for program: Engineers without borders
+2024-08-01 20:53:56,985 - INFO - Evaluating competency: Planning and project managing skills for program: Engineers without borders
+2024-08-01 20:53:57,327 - INFO - Evaluating competency: Networking skills for program: Engineers without borders
+2024-08-01 20:53:57,663 - INFO - Evaluating competency: Negotiating skills for program: Engineers without borders
+2024-08-01 20:53:58,004 - INFO - Evaluating competency: Self-Aware for program: Engineers without borders
+2024-08-01 20:53:58,338 - INFO - Evaluating competency: Enterprising Mindset  for program: Engineers without borders
+2024-08-01 20:53:58,693 - INFO - Evaluating competency: Self-Directed for program: Engineers without borders
+2024-08-01 20:53:59,033 - INFO - Evaluating competency: Teamwork for program: Engineers without borders
+2024-08-01 20:53:59,377 - INFO - Evaluating competency: Uncertainty Management for program: Engineers without borders
+2024-08-01 20:53:59,715 - INFO - Chunk 40 classification completed for program: Engineers without borders
+2024-08-01 20:53:59,717 - INFO - Classifying chunk 41/64 for program: Engineers without borders
+2024-08-01 20:53:59,717 - INFO - Evaluating competency: Entrepreneurship and Entrepreneurial Mindset for program: Engineers without borders
+2024-08-01 20:54:00,059 - INFO - Evaluating competency: Opportunity Recognition  for program: Engineers without borders
+2024-08-01 20:54:00,412 - INFO - Evaluating competency: Market Research for program: Engineers without borders
+2024-08-01 20:54:00,758 - INFO - Evaluating competency: Product Development for program: Engineers without borders
+2024-08-01 20:54:01,748 - INFO - Evaluating competency: Marketing for program: Engineers without borders
+2024-08-01 20:54:02,104 - INFO - Evaluating competency: Business Modeling for program: Engineers without borders
+2024-08-01 20:54:02,470 - INFO - Evaluating competency: Managerial Decision Making for program: Engineers without borders
+2024-08-01 20:54:02,819 - INFO - Evaluating competency: Legal Issues for program: Engineers without borders
+2024-08-01 20:54:03,153 - INFO - Evaluating competency: Financial Decision Making for program: Engineers without borders
+2024-08-01 20:54:03,504 - INFO - Evaluating competency: Observational skills for program: Engineers without borders
+2024-08-01 20:54:03,836 - INFO - Evaluating competency: Creativity skills for program: Engineers without borders
+2024-08-01 20:54:04,223 - INFO - Evaluating competency: Problem solving skills for program: Engineers without borders
+2024-08-01 20:54:04,560 - INFO - Evaluating competency: Communication skills for program: Engineers without borders
+2024-08-01 20:54:04,913 - INFO - Evaluating competency: Decision-making skills for program: Engineers without borders
+2024-08-01 20:54:05,292 - INFO - Evaluating competency: Planning and project managing skills for program: Engineers without borders
+2024-08-01 20:54:05,631 - INFO - Evaluating competency: Networking skills for program: Engineers without borders
+2024-08-01 20:54:05,970 - INFO - Evaluating competency: Negotiating skills for program: Engineers without borders
+2024-08-01 20:54:06,345 - INFO - Evaluating competency: Self-Aware for program: Engineers without borders
+2024-08-01 20:54:06,695 - INFO - Evaluating competency: Enterprising Mindset  for program: Engineers without borders
+2024-08-01 20:54:07,060 - INFO - Evaluating competency: Self-Directed for program: Engineers without borders
+2024-08-01 20:54:07,417 - INFO - Evaluating competency: Teamwork for program: Engineers without borders
+2024-08-01 20:54:07,764 - INFO - Evaluating competency: Uncertainty Management for program: Engineers without borders
+2024-08-01 20:54:08,343 - INFO - Chunk 41 classification completed for program: Engineers without borders
+2024-08-01 20:54:08,343 - INFO - Classifying chunk 42/64 for program: Engineers without borders
+2024-08-01 20:54:08,343 - INFO - Evaluating competency: Entrepreneurship and Entrepreneurial Mindset for program: Engineers without borders
+2024-08-01 20:54:08,818 - INFO - Evaluating competency: Opportunity Recognition  for program: Engineers without borders
+2024-08-01 20:54:09,166 - INFO - Evaluating competency: Market Research for program: Engineers without borders
+2024-08-01 20:54:09,530 - INFO - Evaluating competency: Product Development for program: Engineers without borders
+2024-08-01 20:54:09,876 - INFO - Evaluating competency: Marketing for program: Engineers without borders
+2024-08-01 20:54:10,214 - INFO - Evaluating competency: Business Modeling for program: Engineers without borders
+2024-08-01 20:54:10,566 - INFO - Evaluating competency: Managerial Decision Making for program: Engineers without borders
+2024-08-01 20:54:10,913 - INFO - Evaluating competency: Legal Issues for program: Engineers without borders
+2024-08-01 20:54:11,247 - INFO - Evaluating competency: Financial Decision Making for program: Engineers without borders
+2024-08-01 20:54:11,618 - INFO - Evaluating competency: Observational skills for program: Engineers without borders
+2024-08-01 20:54:11,971 - INFO - Evaluating competency: Creativity skills for program: Engineers without borders
+2024-08-01 20:54:12,316 - INFO - Evaluating competency: Problem solving skills for program: Engineers without borders
+2024-08-01 20:54:12,654 - INFO - Evaluating competency: Communication skills for program: Engineers without borders
+2024-08-01 20:54:13,003 - INFO - Evaluating competency: Decision-making skills for program: Engineers without borders
+2024-08-01 20:54:13,348 - INFO - Evaluating competency: Planning and project managing skills for program: Engineers without borders
+2024-08-01 20:54:13,693 - INFO - Evaluating competency: Networking skills for program: Engineers without borders
+2024-08-01 20:54:14,045 - INFO - Evaluating competency: Negotiating skills for program: Engineers without borders
+2024-08-01 20:54:14,388 - INFO - Evaluating competency: Self-Aware for program: Engineers without borders
+2024-08-01 20:54:14,732 - INFO - Evaluating competency: Enterprising Mindset  for program: Engineers without borders
+2024-08-01 20:54:15,102 - INFO - Evaluating competency: Self-Directed for program: Engineers without borders
+2024-08-01 20:54:15,441 - INFO - Evaluating competency: Teamwork for program: Engineers without borders
+2024-08-01 20:54:15,793 - INFO - Evaluating competency: Uncertainty Management for program: Engineers without borders
+2024-08-01 20:54:16,187 - INFO - Chunk 42 classification completed for program: Engineers without borders
+2024-08-01 20:54:16,187 - INFO - Classifying chunk 43/64 for program: Engineers without borders
+2024-08-01 20:54:16,187 - INFO - Evaluating competency: Entrepreneurship and Entrepreneurial Mindset for program: Engineers without borders
+2024-08-01 20:54:16,526 - INFO - Evaluating competency: Opportunity Recognition  for program: Engineers without borders
+2024-08-01 20:54:16,870 - INFO - Evaluating competency: Market Research for program: Engineers without borders
+2024-08-01 20:54:17,200 - INFO - Evaluating competency: Product Development for program: Engineers without borders
+2024-08-01 20:54:17,550 - INFO - Evaluating competency: Marketing for program: Engineers without borders
+2024-08-01 20:54:18,899 - INFO - Evaluating competency: Business Modeling for program: Engineers without borders
+2024-08-01 20:54:19,532 - INFO - Evaluating competency: Managerial Decision Making for program: Engineers without borders
+2024-08-01 20:54:19,920 - INFO - Evaluating competency: Legal Issues for program: Engineers without borders
+2024-08-01 20:54:20,342 - INFO - Evaluating competency: Financial Decision Making for program: Engineers without borders
+2024-08-01 20:54:20,735 - INFO - Evaluating competency: Observational skills for program: Engineers without borders
+2024-08-01 20:54:21,124 - INFO - Evaluating competency: Creativity skills for program: Engineers without borders
+2024-08-01 20:54:21,483 - INFO - Evaluating competency: Problem solving skills for program: Engineers without borders
+2024-08-01 20:54:21,932 - INFO - Evaluating competency: Communication skills for program: Engineers without borders
+2024-08-01 20:54:22,284 - INFO - Evaluating competency: Decision-making skills for program: Engineers without borders
+2024-08-01 20:54:22,634 - INFO - Evaluating competency: Planning and project managing skills for program: Engineers without borders
+2024-08-01 20:54:22,982 - INFO - Evaluating competency: Networking skills for program: Engineers without borders
+2024-08-01 20:54:23,335 - INFO - Evaluating competency: Negotiating skills for program: Engineers without borders
+2024-08-01 20:54:23,679 - INFO - Evaluating competency: Self-Aware for program: Engineers without borders
+2024-08-01 20:54:24,031 - INFO - Evaluating competency: Enterprising Mindset  for program: Engineers without borders
+2024-08-01 20:54:24,393 - INFO - Evaluating competency: Self-Directed for program: Engineers without borders
+2024-08-01 20:54:24,742 - INFO - Evaluating competency: Teamwork for program: Engineers without borders
+2024-08-01 20:54:25,116 - INFO - Evaluating competency: Uncertainty Management for program: Engineers without borders
+2024-08-01 20:54:25,468 - INFO - Chunk 43 classification completed for program: Engineers without borders
+2024-08-01 20:54:25,468 - INFO - Classifying chunk 44/64 for program: Engineers without borders
+2024-08-01 20:54:25,468 - INFO - Evaluating competency: Entrepreneurship and Entrepreneurial Mindset for program: Engineers without borders
+2024-08-01 20:54:25,828 - INFO - Evaluating competency: Opportunity Recognition  for program: Engineers without borders
+2024-08-01 20:54:26,197 - INFO - Evaluating competency: Market Research for program: Engineers without borders
+2024-08-01 20:54:26,546 - INFO - Evaluating competency: Product Development for program: Engineers without borders
+2024-08-01 20:54:26,906 - INFO - Evaluating competency: Marketing for program: Engineers without borders
+2024-08-01 20:54:27,259 - INFO - Evaluating competency: Business Modeling for program: Engineers without borders
+2024-08-01 20:54:27,597 - INFO - Evaluating competency: Managerial Decision Making for program: Engineers without borders
+2024-08-01 20:54:27,941 - INFO - Evaluating competency: Legal Issues for program: Engineers without borders
+2024-08-01 20:54:28,295 - INFO - Evaluating competency: Financial Decision Making for program: Engineers without borders
+2024-08-01 20:54:28,626 - INFO - Evaluating competency: Observational skills for program: Engineers without borders
+2024-08-01 20:54:28,985 - INFO - Evaluating competency: Creativity skills for program: Engineers without borders
+2024-08-01 20:54:29,318 - INFO - Evaluating competency: Problem solving skills for program: Engineers without borders
+2024-08-01 20:54:29,653 - INFO - Evaluating competency: Communication skills for program: Engineers without borders
+2024-08-01 20:54:29,988 - INFO - Evaluating competency: Decision-making skills for program: Engineers without borders
+2024-08-01 20:54:30,325 - INFO - Evaluating competency: Planning and project managing skills for program: Engineers without borders
+2024-08-01 20:54:30,755 - INFO - Evaluating competency: Networking skills for program: Engineers without borders
+2024-08-01 20:54:31,120 - INFO - Evaluating competency: Negotiating skills for program: Engineers without borders
+2024-08-01 20:54:31,478 - INFO - Evaluating competency: Self-Aware for program: Engineers without borders
+2024-08-01 20:54:31,823 - INFO - Evaluating competency: Enterprising Mindset  for program: Engineers without borders
+2024-08-01 20:54:32,159 - INFO - Evaluating competency: Self-Directed for program: Engineers without borders
+2024-08-01 20:54:32,503 - INFO - Evaluating competency: Teamwork for program: Engineers without borders
+2024-08-01 20:54:32,844 - INFO - Evaluating competency: Uncertainty Management for program: Engineers without borders
+2024-08-01 20:54:33,197 - INFO - Chunk 44 classification completed for program: Engineers without borders
+2024-08-01 20:54:33,197 - INFO - Classifying chunk 45/64 for program: Engineers without borders
+2024-08-01 20:54:33,197 - INFO - Evaluating competency: Entrepreneurship and Entrepreneurial Mindset for program: Engineers without borders
+2024-08-01 20:54:33,521 - INFO - Evaluating competency: Opportunity Recognition  for program: Engineers without borders
+2024-08-01 20:54:33,859 - INFO - Evaluating competency: Market Research for program: Engineers without borders
+2024-08-01 20:54:34,195 - INFO - Evaluating competency: Product Development for program: Engineers without borders
+2024-08-01 20:54:34,540 - INFO - Evaluating competency: Marketing for program: Engineers without borders
+2024-08-01 20:54:34,894 - INFO - Evaluating competency: Business Modeling for program: Engineers without borders
+2024-08-01 20:54:35,234 - INFO - Evaluating competency: Managerial Decision Making for program: Engineers without borders
+2024-08-01 20:54:35,580 - INFO - Evaluating competency: Legal Issues for program: Engineers without borders
+2024-08-01 20:54:36,113 - INFO - Evaluating competency: Financial Decision Making for program: Engineers without borders
+2024-08-01 20:54:36,454 - INFO - Evaluating competency: Observational skills for program: Engineers without borders
+2024-08-01 20:54:36,800 - INFO - Evaluating competency: Creativity skills for program: Engineers without borders
+2024-08-01 20:54:37,139 - INFO - Evaluating competency: Problem solving skills for program: Engineers without borders
+2024-08-01 20:54:37,474 - INFO - Evaluating competency: Communication skills for program: Engineers without borders
+2024-08-01 20:54:37,830 - INFO - Evaluating competency: Decision-making skills for program: Engineers without borders
+2024-08-01 20:54:38,169 - INFO - Evaluating competency: Planning and project managing skills for program: Engineers without borders
+2024-08-01 20:54:38,513 - INFO - Evaluating competency: Networking skills for program: Engineers without borders
+2024-08-01 20:54:38,863 - INFO - Evaluating competency: Negotiating skills for program: Engineers without borders
+2024-08-01 20:54:39,199 - INFO - Evaluating competency: Self-Aware for program: Engineers without borders
+2024-08-01 20:54:39,567 - INFO - Evaluating competency: Enterprising Mindset  for program: Engineers without borders
+2024-08-01 20:54:39,919 - INFO - Evaluating competency: Self-Directed for program: Engineers without borders
+2024-08-01 20:54:40,278 - INFO - Evaluating competency: Teamwork for program: Engineers without borders
+2024-08-01 20:54:40,626 - INFO - Evaluating competency: Uncertainty Management for program: Engineers without borders
+2024-08-01 20:54:40,982 - INFO - Chunk 45 classification completed for program: Engineers without borders
+2024-08-01 20:54:40,982 - INFO - Classifying chunk 46/64 for program: Engineers without borders
+2024-08-01 20:54:40,982 - INFO - Evaluating competency: Entrepreneurship and Entrepreneurial Mindset for program: Engineers without borders
+2024-08-01 20:54:41,333 - INFO - Evaluating competency: Opportunity Recognition  for program: Engineers without borders
+2024-08-01 20:54:41,670 - INFO - Evaluating competency: Market Research for program: Engineers without borders
+2024-08-01 20:54:42,015 - INFO - Evaluating competency: Product Development for program: Engineers without borders
+2024-08-01 20:54:42,363 - INFO - Evaluating competency: Marketing for program: Engineers without borders
+2024-08-01 20:54:42,703 - INFO - Evaluating competency: Business Modeling for program: Engineers without borders
+2024-08-01 20:54:43,057 - INFO - Evaluating competency: Managerial Decision Making for program: Engineers without borders
+2024-08-01 20:54:43,409 - INFO - Evaluating competency: Legal Issues for program: Engineers without borders
+2024-08-01 20:54:43,765 - INFO - Evaluating competency: Financial Decision Making for program: Engineers without borders
+2024-08-01 20:54:44,099 - INFO - Evaluating competency: Observational skills for program: Engineers without borders
+2024-08-01 20:54:44,459 - INFO - Evaluating competency: Creativity skills for program: Engineers without borders
+2024-08-01 20:54:44,807 - INFO - Evaluating competency: Problem solving skills for program: Engineers without borders
+2024-08-01 20:54:45,172 - INFO - Evaluating competency: Communication skills for program: Engineers without borders
+2024-08-01 20:54:45,511 - INFO - Evaluating competency: Decision-making skills for program: Engineers without borders
+2024-08-01 20:54:45,871 - INFO - Evaluating competency: Planning and project managing skills for program: Engineers without borders
+2024-08-01 20:54:46,213 - INFO - Evaluating competency: Networking skills for program: Engineers without borders
+2024-08-01 20:54:46,561 - INFO - Evaluating competency: Negotiating skills for program: Engineers without borders
+2024-08-01 20:54:46,906 - INFO - Evaluating competency: Self-Aware for program: Engineers without borders
