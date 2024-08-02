@@ -17,8 +17,8 @@ from openpyxl import load_workbook # used for written to excel file without over
 ############################################## set up
 #####################################################
 
-DATA = "clean_data.csv"
-COMPETENCIES = "cocurricular_competencies.xlsx"
+DATA = "data/clean_data.csv"
+COMPETENCIES = "data/cocurricular_competencies.xlsx"
 
 # deal with the ssl certificate for nltk download
 try:
