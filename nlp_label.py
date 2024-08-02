@@ -1,13 +1,18 @@
 ############################# importing the libraries
 #####################################################
+# used for processing the data
 import torch
 from transformers import pipeline
 import pandas as pd
+
+# used for handling the stop words and unnecessary segments
 import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 import ssl
-import logging
+
+import logging # logging the data in a file instead of traditional print statements
+from openpyxl import load_workbook # used for written to excel file without overwriting other sheets
 
 ############################################## set up
 #####################################################
@@ -175,7 +180,7 @@ def aggregate_results(results, competency_and_keywords_hashmap):
     return aggregated_scores
 
 
-############################################## running the code
+############################# running the classification on bart
 ###############################################################
 text_hashmap = aggregate_scraped_texts()
 competency_and_keywords_hashmap = make_competency_and_keywords_dictionary()
@@ -205,3 +210,50 @@ for program_name, scores in program_scores.items():
 
 logging.info("Final scores calculated and printed to console.")
 
+######################## conversion of data to columns
+#####################################################
+def assign_binary_classification_value(program, competency):
+    """
+    returns true if either of the:
+        1. average_competency_score
+        2. average_keyword_score
+        3. average_total_aggregate_score
+    are above > 0.5 threshold and otherwise false
+    """
+    return sorted(list(program_scores[program][competency].values()), reverse = True)[0] > 0.5
+            
+#####################################################
+def fetch_column_values(program):
+    """
+    converts the generated scores from the classfication model of BART to a column of bianry (0 or 1) values to be assigned to a program based on the competency score levels
+    """
+    column_values = []
+    competencyScoresForProgram = program_scores[program]
+    for competency in competencyScoresForProgram:
+            column_values.append(assign_binary_classification_value(program, competency))
+    return column_values
+
+
+# list of the programs 
+program_list = ['e@UBCV', 'e@UBCO', 'UBC Social Enterprise Club', 'eProjects UBC', 'Enactus UBC', 'Innovation UBC Hub', 'Summit Leaders', 'UBC Sauder LIFT', 'UBC MBA Innovation & Entrepreneurship club', 'Innovation on Board', 'Engineers without borders', 'Startup Pitch Competition event: UBC SOAR']
+
+
+# generate the column values and save them
+#####################################################
+for program in program_list:
+    logging.info("Generating the list containing the binary classification data for each competency")
+    coc[program] = fetch_column_values(program)
+    
+####################################### save the data
+#####################################################
+logging.info("Saving data into excel file")
+book = load_workbook(COMPETENCIES)
+with pd.ExcelWriter(COMPETENCIES, engine='openpyxl', mode='a', if_sheet_exists='replace') as writer:
+    
+    # Assign the loaded workbook to the writer
+    writer.book = book
+    # Write DataFrame to a specific sheet, 'Sheet3' in this case
+    coc.to_excel(writer, index=False, sheet_name='Sheet3')
+book.save(COMPETENCIES) 
+
+logging.info("Saved completed")
