@@ -10,8 +10,8 @@ import csv
 ###############################
 ##################### variables
 # csv file that can be changed (ensure that the header match the sample)
-CSV_file = "sample_data.csv"
-XLSX_FILE = "sample_data.xlsx"
+CSV_file = "data/sample_data.csv"
+XLSX_FILE = "data/sample_data.xlsx"
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
 }
@@ -103,7 +103,7 @@ def add_program(dict_to_add_to, program_name, link, text):
     
     
 # save programs data
-def save_scraped_programs_csv(database_to_save, file_name = "scraping_results.csv"):
+def save_scraped_programs_csv(database_to_save, file_name = "data/scraping_results.csv"):
     """ 
     get the dictionary containing the programs and save as csv with the intended name
     """
@@ -123,6 +123,4 @@ def save_scraped_programs_csv(database_to_save, file_name = "scraping_results.cs
     with open(file_name, mode='w', newline='') as file:
         writer = csv.writer(file)
         writer.writerows(csv_data)
-
-
 

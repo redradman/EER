@@ -16,10 +16,24 @@ from openpyxl import load_workbook # used for written to excel file without over
 
 ############################################## set up
 #####################################################
+# set up logging
+logging.basicConfig(
+    filename='nlp_label_log.txt', 
+    level=logging.INFO, 
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+
+logging.info("#####################################################")
+logging.info("#####################################################")
+logging.info("setting up")
 
 DATA = "data/clean_data.csv"
 COMPETENCIES = "data/cocurricular_competencies.xlsx"
+PROGRAM_LIST = ['e@UBCV', 'e@UBCO', 'UBC Social Enterprise Club', 'eProjects UBC', 'Enactus UBC', 'Innovation UBC Hub', 'Summit Leaders', 'UBC Sauder LIFT', 'UBC MBA Innovation & Entrepreneurship club', 'Innovation on Board', 'Engineers without borders', 'Startup Pitch Competition event: UBC SOAR']
 
+
+coc = pd.read_excel(COMPETENCIES)
+data = pd.read_csv(DATA)
 # deal with the ssl certificate for nltk download
 try:
     _create_unverified_https_context = ssl._create_unverified_context
@@ -32,19 +46,8 @@ nltk.download('punkt')
 
 
 # Initialize the zero-shot classifier from facebook via HF
-classifier = pipeline("zero-shot-classification", model="facebook/bart-large-mnli")
+classifier = pipeline("zero-shot-classification", model="facebook/bart-large-mnli", device_map="auto")
 
-# set up logging
-logging.basicConfig(
-    filename='classification_log.txt', 
-    level=logging.INFO, 
-    format='%(asctime)s - %(levelname)s - %(message)s'
-)
-
-
-logging.info("#####################################################")
-logging.info("#####################################################")
-logging.info("Commencing classification process")
 
 ##################################################### functions
 ###############################################################
@@ -179,36 +182,31 @@ def aggregate_results(results, competency_and_keywords_hashmap):
     logging.info("Aggregation completed.")
     return aggregated_scores
 
-
-############################# running the classification on bart
-###############################################################
-text_hashmap = aggregate_scraped_texts()
-competency_and_keywords_hashmap = make_competency_and_keywords_dictionary()
-
-# Classify the text for each program
-program_scores = classify_text(text_hashmap, competency_and_keywords_hashmap)
-
-# Display and log the final scores for each program
-for program_name, scores in program_scores.items():
-    print(f"\nProgram: {program_name}")
-    logging.info(f"\nProgram: {program_name}")
-    
-    for competency, score_details in scores.items():
-        competency_score = score_details['average_competency_score']
-        keyword_score = score_details['average_keyword_score']
-        total_aggregate_score = score_details['average_total_aggregate_score']
-
-        print(f"  Competency: {competency}")
-        print(f"    Average Competency Score: {competency_score:.4f}")
-        print(f"    Average Keyword Score: {keyword_score:.4f}")
-        print(f"    Average Total Aggregate Score: {total_aggregate_score:.4f}")
+### Display and log the final scores for each program
+#####################################################
+def include_scores_in_log_file(scores):
+    for program_name, scores in scores.items():
+        # print(f"\nProgram: {program_name}")
+        logging.info(f"\nProgram: {program_name}")
         
-        logging.info(f"  Competency: {competency}")
-        logging.info(f"    Average Competency Score: {competency_score:.4f}")
-        logging.info(f"    Average Keyword Score: {keyword_score:.4f}")
-        logging.info(f"    Average Total Aggregate Score: {total_aggregate_score:.4f}")
+        for competency, score_details in scores.items():
+            competency_score = score_details['average_competency_score']
+            keyword_score = score_details['average_keyword_score']
+            total_aggregate_score = score_details['average_total_aggregate_score']
 
-logging.info("Final scores calculated and printed to console.")
+            # print(f"  Competency: {competency}")
+            # print(f"    Average Competency Score: {competency_score:.4f}")
+            # print(f"    Average Keyword Score: {keyword_score:.4f}")
+            # print(f"    Average Total Aggregate Score: {total_aggregate_score:.4f}")
+            
+            logging.info(f"  Competency: {competency}")
+            logging.info(f"    Average Competency Score: {competency_score:.4f}")
+            logging.info(f"    Average Keyword Score: {keyword_score:.4f}")
+            logging.info(f"    Average Total Aggregate Score: {total_aggregate_score:.4f}")
+
+        logging.info("Final scores calculated.")
+
+
 
 ######################## conversion of data to columns
 #####################################################
@@ -221,7 +219,7 @@ def assign_binary_classification_value(program, competency):
     are above > 0.5 threshold and otherwise false
     """
     return sorted(list(program_scores[program][competency].values()), reverse = True)[0] > 0.5
-            
+
 #####################################################
 def fetch_column_values(program):
     """
@@ -233,31 +231,66 @@ def fetch_column_values(program):
             column_values.append(assign_binary_classification_value(program, competency))
     return column_values
 
-
-# list of the programs 
-program_list = ['e@UBCV', 'e@UBCO', 'UBC Social Enterprise Club', 'eProjects UBC', 'Enactus UBC', 'Innovation UBC Hub', 'Summit Leaders', 'UBC Sauder LIFT', 'UBC MBA Innovation & Entrepreneurship club', 'Innovation on Board', 'Engineers without borders', 'Startup Pitch Competition event: UBC SOAR']
-
-
-# generate the column values and save them
+############ generate the column values and save them
 #####################################################
-for program in program_list:
-    logging.info("Generating the list containing the binary classification data for each competency")
-    coc[program] = fetch_column_values(program)
-    
+def generate_column_values(df): 
+    for program in PROGRAM_LIST:
+        logging.info("Generating the list containing the binary classification data for {program}")
+        df[program] = fetch_column_values(program)
+
+########################## save program scores as csv
+#####################################################
+def save_raw_data_as_csv(results, path_to_file):
+    data = []
+    for program, skills in results.items():
+        for skill, scores in skills.items():
+            row = {
+                'program': program,
+                'skill': skill,
+                'competency_score': scores['average_competency_score'],
+                'keyword_score': scores['average_keyword_score'],
+                'aggregate_score': scores['average_total_aggregate_score']
+            }
+            data.append(row)
+    df = pd.DataFrame(data)
+    df.to_csv(path_to_file, index=False)
+
 ####################################### save the data
 #####################################################
-logging.info("Saving data into excel file")
-book = load_workbook(COMPETENCIES)
-with pd.ExcelWriter(COMPETENCIES, engine='openpyxl', mode='a', if_sheet_exists='replace') as writer:
+def save_data_to_excel(df, path, name_of_sheet = "Sheet3"):
+    book = load_workbook(path)
+
+    # Create a Pandas Excel writer using openpyxl as the engine
+    with pd.ExcelWriter(path, engine='openpyxl', mode='a', if_sheet_exists='replace') as writer:
+        # Write the DataFrame 'coc' to a specific sheet, 'Sheet3' in this case
+        df.to_excel(writer, index=False, sheet_name='Sheet3')
+    book.save(path) 
+
+############################# running the classification on bart
+###############################################################
+logging.info("Running body of the code")
+
+logging.info("Creating aggregate from scraped texts")
+text_hashmap = aggregate_scraped_texts()
+
+logging.info("Creating hashmap of competency and keywords")
+competency_and_keywords_hashmap = make_competency_and_keywords_dictionary()
+
+logging.info("Commence classification")
+program_scores = classify_text(text_hashmap, competency_and_keywords_hashmap)
+
+logging.info("Saving raw data as csv file")
+save_raw_data_as_csv(program_scores, 'data/program_scores_raw.csv')
+
+# logging.info("Including scores in log file")
+# include_scores_in_log_file(program_scores)
+
+logging.info("Converting numeric model value to binary classifcation")
+generate_column_values(coc)
     
-    # Assign the loaded workbook to the writer
-    writer.book = book
-    # Write DataFrame to a specific sheet, 'Sheet3' in this case
-    coc.to_excel(writer, index=False, sheet_name='Sheet3')
-book.save(COMPETENCIES) 
-
-logging.info("Saved completed")
+logging.info("Saving data as excel")
+save_data_to_excel(coc, COMPETENCIES)
 
 
-
-#### competencies finish
+logging.info("Code Executed Successfully")
+logging.info("#####################################################")
