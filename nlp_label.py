@@ -29,7 +29,7 @@ logging.info("#####################################################")
 logging.info("#####################################################")
 logging.info("setting up")
 
-DATA = "data/clean_data.csv"
+# DATA = "data/clean_data.csv"
 COMPETENCIES = "data/cocurricular_competencies.xlsx"
 PROGRAM_LIST = ['e@UBCV', 'e@UBCO', 'UBC Social Enterprise Club', 'eProjects UBC', 'Enactus UBC', 'Innovation UBC Hub', 'Summit Leaders', 'UBC Sauder LIFT', 'UBC MBA Innovation & Entrepreneurship club', 'Innovation on Board', 'Engineers without borders', 'Startup Pitch Competition event: UBC SOAR']
 
@@ -54,7 +54,7 @@ classifier = pipeline("zero-shot-classification", model="facebook/bart-large-mnl
 logging.info("Running body of the code")
 
 logging.info("Creating aggregate from scraped texts")
-text_hashmap = aggregate_scraped_texts(data)
+text_hashmap = aggregate_scraped_texts(data, "program")
 
 logging.info("Creating hashmap of competency and keywords")
 competency_and_keywords_hashmap = make_competency_and_keywords_dictionary(coc)

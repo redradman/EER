@@ -34,11 +34,11 @@ def preprocess_text(text):
 
 ###############################################################
 
-def aggregate_scraped_texts(data):
+def aggregate_scraped_texts(data, program_name: str):
     """ 
     combines the extracted texts from scraping together
     """
-    text_hashmap = dict.fromkeys(data["program"], '')
+    text_hashmap = dict.fromkeys(data[program_name], '')
     for row in data.values:
         if type(row[2]) == str:
             text_hashmap[row[0]] += row[2]
