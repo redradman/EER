@@ -177,7 +177,7 @@ def include_scores_in_log_file(scores):
 
 ######################## conversion of data to columns
 #####################################################
-def assign_binary_classification_value(program, competency):
+def assign_binary_classification_value(program, competency, program_scores):
     """
     returns true if either of the:
         1. average_competency_score
@@ -190,12 +190,13 @@ def assign_binary_classification_value(program, competency):
 #####################################################
 def fetch_column_values(program, program_scores):
     """
-    converts the generated scores from the classfication model of BART to a column of bianry (0 or 1) values to be assigned to a program based on the competency score levels
+    converts the generated scores from the classfication model of BART to a column of binary (0 or 1) values 
+    to be assigned to a program based on the competency score levels
     """
     column_values = []
     competencyScoresForProgram = program_scores[program]
     for competency in competencyScoresForProgram:
-            column_values.append(assign_binary_classification_value(program, competency))
+        column_values.append(assign_binary_classification_value(program, competency, program_scores))
     return column_values
 
 ############ generate the column values and save them

@@ -14,7 +14,12 @@ import ssl
 import logging # logging the data in a file instead of traditional print statements
 from openpyxl import load_workbook # used for written to excel file without overwriting other sheets
 
-from nlp_label_funcs import *
+from nlp_label_funcs import aggregate_scraped_texts
+from nlp_label_funcs import make_competency_and_keywords_dictionary
+from nlp_label_funcs import classify_text
+from nlp_label_funcs import save_raw_data_as_csv
+from nlp_label_funcs import generate_column_values
+from nlp_label_funcs import save_data_to_excel
 
 ############################################## set up
 #####################################################
@@ -29,7 +34,7 @@ logging.info("#####################################################")
 logging.info("#####################################################")
 logging.info("setting up")
 
-# DATA = "data/clean_data.csv"
+DATA = "data/clean_data.csv"
 COMPETENCIES = "data/cocurricular_competencies.xlsx"
 PROGRAM_LIST = ['e@UBCV', 'e@UBCO', 'UBC Social Enterprise Club', 'eProjects UBC', 'Enactus UBC', 'Innovation UBC Hub', 'Summit Leaders', 'UBC Sauder LIFT', 'UBC MBA Innovation & Entrepreneurship club', 'Innovation on Board', 'Engineers without borders', 'Startup Pitch Competition event: UBC SOAR']
 
