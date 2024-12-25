@@ -1,14 +1,10 @@
 ############################# importing the libraries
 #####################################################
-import torch
 from transformers import pipeline
 import pandas as pd
-import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
-import ssl
 import logging
-from openpyxl import load_workbook
 
 ############################################## constants
 #####################################################
