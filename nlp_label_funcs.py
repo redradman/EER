@@ -1,15 +1,12 @@
 ############################# importing the libraries
 #####################################################
 # used for processing the data
-import torch
 from transformers import pipeline
 import pandas as pd
 
 # used for handling the stop words and unnecessary segments
-import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
-import ssl
 
 import logging # logging the data in a file instead of traditional print statements
 from openpyxl import load_workbook # used for written to excel file without overwriting other sheets
@@ -40,7 +37,7 @@ def aggregate_scraped_texts(data, program_name: str):
     """
     text_hashmap = dict.fromkeys(data[program_name], '')
     for row in data.values:
-        if type(row[2]) == str:
+        if isinstance(row[2], str):
             text_hashmap[row[0]] += row[2]
     return text_hashmap
 
